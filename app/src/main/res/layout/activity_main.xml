@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <!-- Header with user greeting and hamburger icon -->
+    <RelativeLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp">
+
+        <TextView
+            android:id="@+id/userGreetingTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hi {user.name}"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="16dp"/>
+
+
+    </RelativeLayout>
+
+    <!-- Grid layout for features -->
+    <GridLayout
+        android:id="@+id/featuresGridLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/headerLayout"
+        android:columnCount="2"
+        android:rowCount="3"
+        android:layout_marginTop="16dp"
+        android:alignmentMode="alignMargins"
+        android:columnOrderPreserved="false">
+
+        <!-- Attendance Tracker -->
+        <Button
+            android:id="@+id/attendanceTrackerButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:padding="16dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/rounded_button"
+            android:text="Attendance Tracker"
+            android:textAllCaps="false"
+            android:onClick="openAttendanceTrackerActivity"/>
+
+        <!-- Important Notices -->
+        <Button
+            android:id="@+id/importantNoticesButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:padding="16dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/rounded_button"
+            android:text="Important Notices"
+            android:textAllCaps="false"
+            android:onClick="openImportantNoticesActivity"/>
+
+        <!-- Class Time Table -->
+        <Button
+            android:id="@+id/classTimeTableButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:padding="16dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/rounded_button"
+            android:text="Class Time Table"
+            android:textAllCaps="false"
+            android:onClick="openClassTimeTableActivity"/>
+
+        <!-- GPA Calculator -->
+        <Button
+            android:id="@+id/gpaCalculatorButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:padding="16dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/rounded_button"
+            android:text="GPA Calculator"
+            android:textAllCaps="false"
+            android:onClick="openGPACalculatorActivity"/>
+
+        <!-- Event Registration -->
+        <Button
+            android:id="@+id/eventRegistrationButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:padding="16dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/rounded_button"
+            android:text="Event Registration"
+            android:textAllCaps="false"
+            android:onClick="openEventRegistrationActivity"/>
+
+        <!-- Blood Requirement -->
+        <Button
+            android:id="@+id/bloodRequirementButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:padding="16dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/rounded_button"
+            android:text="Blood Requirement"
+            android:textAllCaps="false"
+            android:onClick="openBloodRequirementActivity"/>
+
+        <!-- Phone Directory -->
+        <Button
+            android:id="@+id/phoneDirectoryButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:padding="16dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/rounded_button"
+            android:text="Phone Directory"
+            android:textAllCaps="false"
+            android:onClick="openPhoneDirectoryActivity"/>
+
+    </GridLayout>
+</RelativeLayout>
