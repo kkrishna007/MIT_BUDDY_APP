@@ -47,7 +47,6 @@ public class BloodRequirementActivity extends AppCompatActivity {
         builder.setView(dialogView);
 
         EditText headlineEditText = dialogView.findViewById(R.id.headlineEditText);
-        EditText nameEditText = dialogView.findViewById(R.id.nameEditText);
         EditText bloodTypeEditText = dialogView.findViewById(R.id.bloodTypeEditText);
         EditText dateEditText = dialogView.findViewById(R.id.dateEditText);
         EditText contactEditText = dialogView.findViewById(R.id.contactEditText);
@@ -61,12 +60,11 @@ public class BloodRequirementActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String headline = headlineEditText.getText().toString();
-                String name = nameEditText.getText().toString();
                 String bloodType = bloodTypeEditText.getText().toString();
                 String date = dateEditText.getText().toString();
                 String contact = contactEditText.getText().toString();
 
-                addBloodRequirementCard(headline, name, bloodType, date, contact);
+                addBloodRequirementCard(headline, bloodType, date, contact);
 
                 dialog.dismiss();
             }
@@ -74,17 +72,15 @@ public class BloodRequirementActivity extends AppCompatActivity {
     }
 
     // Method to add a new blood requirement card
-    private void addBloodRequirementCard(String headline, String name, String bloodType, String date, String contact) {
+    private void addBloodRequirementCard(String headline, String bloodType, String date, String contact) {
         View cardView = LayoutInflater.from(this).inflate(R.layout.blood_requirement_card, null);
 
         TextView headlineTextView = cardView.findViewById(R.id.headlineTextView);
-        TextView nameTextView = cardView.findViewById(R.id.nameTextView);
         TextView bloodTypeTextView = cardView.findViewById(R.id.bloodTypeTextView);
         TextView dateTextView = cardView.findViewById(R.id.dateTextView);
         TextView contactTextView = cardView.findViewById(R.id.contactTextView);
 
         headlineTextView.setText(headline);
-        nameTextView.setText("NAME: " + name);
         bloodTypeTextView.setText("BLOOD TYPE: " + bloodType);
         dateTextView.setText("DATE: " + date);
         contactTextView.setText("CONTACT: " + contact);
