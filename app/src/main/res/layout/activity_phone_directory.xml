@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
+<<<<<<< HEAD
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+=======
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+>>>>>>> f75b568851283c4d76cc687f6102b5ea68442a0d
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+<<<<<<< HEAD
     android:background="@drawable/card_background"
     tools:context=".PhoneDirectoryActivity">
 
@@ -303,3 +308,8 @@
         </androidx.cardview.widget.CardView>
     </GridLayout>
 </RelativeLayout>
+=======
+    tools:context=".PhoneDirectoryActivity">
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+>>>>>>> f75b568851283c4d76cc687f6102b5ea68442a0d
