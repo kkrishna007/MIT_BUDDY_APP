@@ -303,8 +303,3 @@
         </androidx.cardview.widget.CardView>
     </GridLayout>
 </RelativeLayout>
-=======
-    tools:context=".PhoneDirectoryActivity">
-
-</androidx.constraintlayout.widget.ConstraintLayout>
->>>>>>> f75b568851283c4d76cc687f6102b5ea68442a0d

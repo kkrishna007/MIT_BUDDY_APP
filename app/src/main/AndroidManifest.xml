@@ -13,12 +13,9 @@
         android:theme="@style/Theme.MITBUDDYAPP"
         tools:targetApi="31">
         <activity
-<<<<<<< HEAD
             android:name=".DisplayContactsActivity"
             android:exported="false" />
         <activity
-=======
->>>>>>> f75b568851283c4d76cc687f6102b5ea68442a0d
             android:name=".PhoneDirectoryActivity"
             android:exported="false" />
         <activity
