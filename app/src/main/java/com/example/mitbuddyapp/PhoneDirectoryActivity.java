@@ -1,16 +1,13 @@
 package com.example.mitbuddyapp;
 
 import androidx.appcompat.app.AppCompatActivity;
-<<<<<<< HEAD
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.GridLayout;
 import android.widget.Toast;
-=======
 
 import android.os.Bundle;
->>>>>>> f75b568851283c4d76cc687f6102b5ea68442a0d
 
 public class PhoneDirectoryActivity extends AppCompatActivity {
 
@@ -18,7 +15,6 @@ public class PhoneDirectoryActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_phone_directory);
-<<<<<<< HEAD
 
         // Find GridLayout
         GridLayout gridLayout = findViewById(R.id.gridLayout);
@@ -67,7 +63,3 @@ public class PhoneDirectoryActivity extends AppCompatActivity {
         startActivity(intent);
     }
 }
-=======
-    }
-}
->>>>>>> f75b568851283c4d76cc687f6102b5ea68442a0d
