@@ -1,9 +1,274 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EventRegistrationActivity">
+    android:background="@drawable/card_background"
+    tools:context=".PhoneDirectoryActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="match_parent"
+        android:layout_height="550dp"
+        android:rowCount="5"
+        android:columnCount="2"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="12dp"
+        android:layout_below="@+id/scanqr"
+        android:layout_marginBottom="12dp">
+
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/event1"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="12dp"
+            app:cardBackgroundColor="@color/white"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_row="2"
+            android:layout_column="0"
+            android:layout_margin="5dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Codalympics"
+                    android:textSize="25sp"
+                    android:textAlignment="center"
+                    android:textStyle="bold"></TextView>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Participants will be engaged in solving and debugging coding
+                    challenges by rectifying the errors in the code"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:layout_margin="10dp"
+                    >
+                </TextView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="07-04-2024"
+                    android:textSize="20dp"
+                    android:textAlignment="center"
+                    android:textStyle="bold"></TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Prize:"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    android:textColor="#ff0000"
+                    >
+                </TextView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rs. 3000"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="30dp"
+                    android:textStyle="bold"
+                    android:textColor="#ff0000"
+                    >
+                </TextView>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/event2"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="12dp"
+            app:cardBackgroundColor="@color/white"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_row="2"
+            android:layout_column="1"
+            android:layout_margin="5dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="CommSync Workshop"
+                    android:textSize="25sp"
+                    android:textAlignment="center"
+                    android:textStyle="bold"></TextView>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="A workshop on Antenna Design and Signal Systems. Good opportunity for Antenna and Communication enthusiasts. No Registration fees."
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:layout_margin="10dp"
+                    >
+                </TextView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="07-04-2024"
+                    android:textSize="20dp"
+                    android:textAlignment="center"
+                    android:textStyle="bold"></TextView>
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/event3"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="12dp"
+            app:cardBackgroundColor="@color/white"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_row="3"
+            android:layout_column="0"
+            android:layout_margin="5dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Git/Github Webinar"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    android:textAlignment="center"></TextView>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="An informative workshop on git and github, no registration fee, from John Hopkins University"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:layout_margin="10dp"
+                    >
+                </TextView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="07-04-2024"
+                    android:textSize="20dp"
+                    android:textAlignment="center"
+                    android:textStyle="bold"></TextView>
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/event4"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="12dp"
+            app:cardBackgroundColor="@color/white"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_row="3"
+            android:layout_column="1"
+            android:layout_margin="5dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Treasure Hunt"
+                    android:textSize="25sp"
+                    android:textAlignment="center"
+                    android:textStyle="bold"></TextView>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Participants will be given clues to find
+                    places in campus in a race against time"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:layout_margin="10dp"
+                    >
+                </TextView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="07-04-2024"
+                    android:textSize="20dp"
+                    android:textAlignment="center"
+                    android:textStyle="bold"></TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Prize:"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    android:textColor="#ff0000"
+                    >
+                </TextView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rs. 5000"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="30dp"
+                    android:textStyle="bold"
+                    android:textColor="#ff0000"
+                    >
+                </TextView>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </GridLayout>
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:layout_below="@id/title_View">
+
+    </WebView>
+
+</RelativeLayout>
