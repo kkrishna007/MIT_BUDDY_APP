@@ -1,0 +1,148 @@
+{
+  "Computer Science": {
+    "semesters": [
+      {
+        "sem_number": 3,
+        "subjects": [
+          {"subj_code": "MAT2155", "subject_name": "Engineering Mathematics - III", "credits": 3},
+          {"subj_code": "CSE2151", "subject_name": "Computer Organization & Architecture", "credits": 4},
+          {"subj_code": "CSE2152", "subject_name": "Data Structures and Applications", "credits": 4},
+          {"subj_code": "CSE2153", "subject_name": "Digital System Design", "credits": 4},
+          {"subj_code": "CSE2154", "subject_name": "Object Oriented Programming", "credits": 4},
+          {"subj_code": "CSE2161", "subject_name": "Data Structures Lab", "credits": 1},
+          {"subj_code": "CSE2162", "subject_name": "Digital System Design Lab", "credits": 1},
+          {"subj_code": "CSE2163", "subject_name": "Object Oriented Programming Lab", "credits": 1}
+        ]
+      },
+      {
+        "sem_number": 4,
+        "subjects": [
+          {"subj_code": "MAT2256", "subject_name": "Engineering Mathematics - IV", "credits": 3},
+          {"subj_code": "CSE2251", "subject_name": "Database Systems", "credits": 3},
+          {"subj_code": "CSE2252", "subject_name": "Design and Analysis of Algorithms", "credits": 4},
+          {"subj_code": "CSE2253", "subject_name": "Embedded Systems", "credits": 4},
+          {"subj_code": "CSE2254", "subject_name": "Formal Languages and Automata Theory", "credits": 4},
+          {"subj_code": "CSE2261", "subject_name": "Algorithms Lab", "credits": 1},
+          {"subj_code": "CSE2262", "subject_name": "Database Systems Lab", "credits": 2},
+          {"subj_code": "CSE2263", "subject_name": "Embedded Systems Lab", "credits": 1}
+        ]
+      },
+      {
+        "sem_number": 5,
+        "subjects": [
+          {"subj_code": "HUM3152", "subject_name": "Essentials of Management", "credits": 3},
+          {"subj_code": "CSE3151", "subject_name": "Compiler Design", "credits": 3},
+          {"subj_code": "CSE3152", "subject_name": "Computer Networks", "credits": 3},
+          {"subj_code": "CSE3153", "subject_name": "Operating Systems", "credits": 3},
+          {"subj_code": "CSE3154", "subject_name": "Software Engineering", "credits": 3},
+          {"subj_code": "CSE3161", "subject_name": "Compiler Design Lab", "credits": 2},
+          {"subj_code": "CSE3162", "subject_name": "Computer Networks Lab", "credits": 2},
+          {"subj_code": "CSE3163", "subject_name": "Operating Systems Lab", "credits": 2}
+        ]
+      },
+      {
+        "sem_number": 6,
+        "subjects": [
+          {"subj_code": "HUM3151", "subject_name": "Engg Economics and Financial Management", "credits": 3},
+          {"subj_code": "CSE3251", "subject_name": "Distributed Systems", "credits": 4},
+          {"subj_code": "CSE3252", "subject_name": "Parallel Computer Architecture and Programming", "credits": 3},
+          {"subj_code": "CSEXXXX", "subject_name": "Program Elective - I", "credits": 3},
+          {"subj_code": "CSEXXXX", "subject_name": "Program Elective - II", "credits": 3},
+          {"subj_code": "CSE3261", "subject_name": "Distributed Systems Lab", "credits": 1},
+          {"subj_code": "CSE3262", "subject_name": "Internet Technologies Lab", "credits": 2},
+          {"subj_code": "CSE3263", "subject_name": "Parallel Programming Lab", "credits": 1}
+        ]
+      },
+      {
+        "sem_number": 7,
+        "subjects": [
+          {"subj_code": "CSEXXXX", "subject_name": "Program Elective - III", "credits": 3},
+          {"subj_code": "CSEXXXX", "subject_name": "Program Elective - IV", "credits": 3},
+          {"subj_code": "CSEXXXX", "subject_name": "Program Elective - V", "credits": 3},
+          {"subj_code": "CSEXXXX", "subject_name": "Program Elective - VI", "credits": 3},
+          {"subj_code": "CSEXXXX", "subject_name": "Program Elective - VII", "credits": 3}
+        ]
+      },
+      {
+        "sem_number": 8,
+        "subjects": [
+          {"subj_code": "CSE4298", "subject_name": "Industrial Training", "credits": 1},
+          {"subj_code": "CSE4299", "subject_name": "Project Work/Practice School", "credits": 12}
+        ]
+      }
+    ]
+  },
+  "Computer Science (AI & ML)": {
+    "semesters": [
+      {
+        "sem_number": 3,
+        "subjects": [
+          {"subj_code": "MATXXXX", "subject_name": "Linear Algebra and Logic", "credits": 3},
+          {"subj_code": "CSE2171", "subject_name": "Digital Systems & Computer Organization", "credits": 3},
+          {"subj_code": "CSEXXXX", "subject_name": "Data Structures", "credits": 4},
+          {"subj_code": "CSE2173", "subject_name": "Introduction to Data Analytics", "credits": 3},
+          {"subj_code": "CSEXXXX", "subject_name": "Object Oriented Programming", "credits": 4},
+          {"subj_code": "CSEXXXX", "subject_name": "Data Structures Lab", "credits": 1},
+          {"subj_code": "CSEXXXX", "subject_name": "Formal Languages and Automata Theory", "credits": 3},
+          {"subj_code": "CSEXXXX", "subject_name": "Object Oriented Programming Lab", "credits": 1}
+        ]
+      },
+      {
+        "sem_number": 4,
+        "subjects": [
+          {"subj_code": "MATXXXX", "subject_name": "Probability And Optimization", "credits": 3},
+          {"subj_code": "CSEXXXX", "subject_name": "Database Systems", "credits": 4},
+          {"subj_code": "CSEXXXX", "subject_name": "Design and Analysis of Algorithms", "credits": 4},
+          {"subj_code": "CSE2271", "subject_name": "Machine Learning Algorithms", "credits": 3},
+          {"subj_code": "CSE2272", "subject_name": "Data Science & Visualization", "credits": 3},
+          {"subj_code": "CSEXXXX", "subject_name": "Design and Analysis of Algorithms Lab", "credits": 2},
+          {"subj_code": "CSEXXXX", "subject_name": "Database Systems Lab", "credits": 1},
+          {"subj_code": "CSEXXXX", "subject_name": "Machine Learning Lab", "credits": 1}
+        ]
+      },
+      {
+        "sem_number": 5,
+        "subjects": [
+          {"subj_code": "HUMXXXX", "subject_name": "Human Values, Ethics & IPR", "credits": 3},
+          {"subj_code": "CSEXXXX", "subject_name": "Deep Learning", "credits": 3},
+          {"subj_code": "CSEXXXX", "subject_name": "Natural Language Processing", "credits": 3},
+          {"subj_code": "CSEXXXX", "subject_name": "Big Data Analytics", "credits": 3},
+          {"subj_code": "CSEXXXX", "subject_name": "Reinforcement Learning", "credits": 3},
+          {"subj_code": "CSEXXXX", "subject_name": "Deep Learning Lab", "credits": 2},
+          {"subj_code": "CSEXXXX", "subject_name": "Natural Language Processing Lab", "credits": 1},
+          {"subj_code": "CSEXXXX", "subject_name": "Big Data Analytics Lab", "credits": 1}
+        ]
+      },
+      {
+        "sem_number": 6,
+        "subjects": [
+          {"subj_code": "HUMXXXX", "subject_name": "Management of Technologies and Innovations", "credits": 3},
+          {"subj_code": "CSEXXXX", "subject_name": "Internet of Things", "credits": 3},
+          {"subj_code": "CSEXXXX", "subject_name": "Information Retrieval Techniques", "credits": 3},
+          {"subj_code": "CSEXXXX", "subject_name": "Cloud Computing", "credits": 3},
+          {"subj_code": "CSEXXXX", "subject_name": "Blockchain Technology", "credits": 3},
+          {"subj_code": "CSEXXXX", "subject_name": "Internet of Things Lab", "credits": 2},
+          {"subj_code": "CSEXXXX", "subject_name": "Information Retrieval Techniques Lab", "credits": 1},
+          {"subj_code": "CSEXXXX", "subject_name": "Cloud Computing Lab", "credits": 1}
+        ]
+      },
+      {
+        "sem_number": 7,
+        "subjects": [
+          {"subj_code": "CSEXXXX", "subject_name": "Deep Reinforcement Learning", "credits": 3},
+          {"subj_code": "CSEXXXX", "subject_name": "Computer Vision", "credits": 3},
+          {"subj_code": "CSEXXXX", "subject_name": "Natural Language Processing Applications", "credits": 3},
+          {"subj_code": "CSEXXXX", "subject_name": "AI & ML Elective - I", "credits": 3},
+          {"subj_code": "CSEXXXX", "subject_name": "AI & ML Elective - II", "credits": 3}
+        ]
+      },
+      {
+        "sem_number": 8,
+        "subjects": [
+          {"subj_code": "CSEXXXX", "subject_name": "Project Work/Internship", "credits": 12}
+        ]
+      }
+    ]
+  }
+}
+

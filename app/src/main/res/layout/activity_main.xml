@@ -34,7 +34,7 @@
             android:layout_alignParentStart="true"
             android:layout_centerVertical="true"
             android:layout_marginStart="16dp"
-            android:text="Hi {user.name}!"
+            android:text="Mighty Might MIT!"
             android:textColor="@android:color/black"
             android:textSize="18sp"
             android:textStyle="bold" />
@@ -85,38 +85,6 @@
             android:textAllCaps="false"
             android:textStyle="bold" />
 
-        <!-- Class Time Table -->
-        <Button
-            android:id="@+id/classTimeTableButton"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_margin="8dp"
-            android:background="@drawable/rounded_button"
-            android:foreground="@drawable/card_background"
-            android:onClick="openClassTimeTableActivity"
-            android:padding="16dp"
-            android:text="Class Time Table"
-            android:textAllCaps="false"
-            android:textStyle="bold" />
-
-        <!-- GPA Calculator -->
-        <Button
-            android:id="@+id/gpaCalculatorButton"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_margin="8dp"
-            android:background="@drawable/rounded_button"
-            android:foreground="@drawable/card_background"
-            android:onClick="openGPACalculatorActivity"
-            android:padding="16dp"
-            android:text="GPA Calculator"
-            android:textAllCaps="false"
-            android:textStyle="bold" />
-
         <!-- Event Registration -->
         <Button
             android:id="@+id/eventRegistrationButton"
@@ -164,9 +132,13 @@
             android:text="Phone Directory"
             android:textAllCaps="false"
             android:textStyle="bold" />
-
+        <!-- Class Time Table -->
         <Button
+<<<<<<< HEAD
             android:id="@+id/FindFaculty"
+=======
+            android:id="@+id/classTimeTableButton"
+>>>>>>> f72119a9dbcdecda53473ccf25dd9f143a4b9814
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_rowWeight="1"
@@ -174,11 +146,49 @@
             android:layout_margin="8dp"
             android:background="@drawable/rounded_button"
             android:foreground="@drawable/card_background"
+<<<<<<< HEAD
             android:onClick="openFindFacultyActivity"
             android:padding="16dp"
             android:text="Find Faculty"
+=======
+            android:onClick="openClassTimeTableActivity"
+            android:padding="16dp"
+            android:text="Class Time Table"
+>>>>>>> f72119a9dbcdecda53473ccf25dd9f143a4b9814
             android:textAllCaps="false"
             android:textStyle="bold" />
+
+        <!-- GPA Calculator -->
+        <Button
+            android:id="@+id/gpaCalculatorButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:background="@drawable/rounded_button"
+            android:foreground="@drawable/card_background"
+            android:onClick="openGPACalculatorActivity"
+            android:padding="16dp"
+            android:text="GPA Calculator"
+            android:textAllCaps="false"
+            android:textStyle="bold" />
+
+
+        <!--        <Button-->
+<!--            android:id="@+id/ab5MapButton"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_rowWeight="1"-->
+<!--            android:layout_columnWeight="1"-->
+<!--            android:layout_margin="8dp"-->
+<!--            android:background="@drawable/rounded_button"-->
+<!--            android:foreground="@drawable/card_background"-->
+<!--            android:onClick="openPhoneDirectoryActivity"-->
+<!--            android:padding="16dp"-->
+<!--            android:text="AB5 Map"-->
+<!--            android:textAllCaps="false"-->
+<!--            android:textStyle="bold" />-->
 
     </GridLayout>
 </RelativeLayout>

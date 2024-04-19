@@ -5,10 +5,16 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CAMERA" />
+<<<<<<< HEAD
 
     <uses-feature
         android:name="android.hardware.camera"
         android:required="false" />
+=======
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+>>>>>>> f72119a9dbcdecda53473ccf25dd9f143a4b9814
 
     <application
         android:allowBackup="true"

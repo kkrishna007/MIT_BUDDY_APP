@@ -1,0 +1,11 @@
+<resources>
+    <string-array name="branch_options">
+        <item>CCE</item>
+        <item>IT</item>
+    </string-array>
+    <string-array name="section_options">
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+    </string-array>
+</resources>
