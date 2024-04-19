@@ -31,6 +31,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void openFindFacultyActivity(View view) {
+        Intent intent = new Intent(this, FindFaculty.class);
+        startActivity(intent);
+    }
+
     // Method to open Class Time Table Activity
     public void openClassTimeTableActivity(View view) {
         Intent intent = new Intent(this, ClassTimeTableActivity.class);

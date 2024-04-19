@@ -166,7 +166,7 @@
             android:textStyle="bold" />
 
         <Button
-            android:id="@+id/ab5MapButton"
+            android:id="@+id/FindFaculty"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_rowWeight="1"
@@ -174,9 +174,9 @@
             android:layout_margin="8dp"
             android:background="@drawable/rounded_button"
             android:foreground="@drawable/card_background"
-            android:onClick="openPhoneDirectoryActivity"
+            android:onClick="openFindFacultyActivity"
             android:padding="16dp"
-            android:text="AB5 Map"
+            android:text="Find Faculty"
             android:textAllCaps="false"
             android:textStyle="bold" />
 
