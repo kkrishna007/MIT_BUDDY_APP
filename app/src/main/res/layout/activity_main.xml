@@ -85,38 +85,6 @@
             android:textAllCaps="false"
             android:textStyle="bold" />
 
-        <!-- Class Time Table -->
-        <Button
-            android:id="@+id/classTimeTableButton"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_margin="8dp"
-            android:background="@drawable/rounded_button"
-            android:foreground="@drawable/card_background"
-            android:onClick="openClassTimeTableActivity"
-            android:padding="16dp"
-            android:text="Class Time Table"
-            android:textAllCaps="false"
-            android:textStyle="bold" />
-
-        <!-- GPA Calculator -->
-        <Button
-            android:id="@+id/gpaCalculatorButton"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_margin="8dp"
-            android:background="@drawable/rounded_button"
-            android:foreground="@drawable/card_background"
-            android:onClick="openGPACalculatorActivity"
-            android:padding="16dp"
-            android:text="GPA Calculator"
-            android:textAllCaps="false"
-            android:textStyle="bold" />
-
         <!-- Event Registration -->
         <Button
             android:id="@+id/eventRegistrationButton"
@@ -164,9 +132,9 @@
             android:text="Phone Directory"
             android:textAllCaps="false"
             android:textStyle="bold" />
-
+        <!-- Class Time Table -->
         <Button
-            android:id="@+id/ab5MapButton"
+            android:id="@+id/classTimeTableButton"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_rowWeight="1"
@@ -174,11 +142,43 @@
             android:layout_margin="8dp"
             android:background="@drawable/rounded_button"
             android:foreground="@drawable/card_background"
-            android:onClick="openPhoneDirectoryActivity"
+            android:onClick="openClassTimeTableActivity"
             android:padding="16dp"
-            android:text="AB5 Map"
+            android:text="Class Time Table"
             android:textAllCaps="false"
             android:textStyle="bold" />
+
+        <!-- GPA Calculator -->
+        <Button
+            android:id="@+id/gpaCalculatorButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:background="@drawable/rounded_button"
+            android:foreground="@drawable/card_background"
+            android:onClick="openGPACalculatorActivity"
+            android:padding="16dp"
+            android:text="GPA Calculator"
+            android:textAllCaps="false"
+            android:textStyle="bold" />
+
+
+        <!--        <Button-->
+<!--            android:id="@+id/ab5MapButton"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_rowWeight="1"-->
+<!--            android:layout_columnWeight="1"-->
+<!--            android:layout_margin="8dp"-->
+<!--            android:background="@drawable/rounded_button"-->
+<!--            android:foreground="@drawable/card_background"-->
+<!--            android:onClick="openPhoneDirectoryActivity"-->
+<!--            android:padding="16dp"-->
+<!--            android:text="AB5 Map"-->
+<!--            android:textAllCaps="false"-->
+<!--            android:textStyle="bold" />-->
 
     </GridLayout>
 </RelativeLayout>
