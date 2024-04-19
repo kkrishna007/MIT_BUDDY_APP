@@ -1,0 +1,124 @@
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/subjectCard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Subject Name -->
+        <TextView
+            android:id="@+id/subjectNameTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Subject Name"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- Attendance Status -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <!-- Attended Classes -->
+            <TextView
+                android:id="@+id/attendedClassesTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Attended: 0"
+                android:textSize="16sp" />
+
+            <!-- Missed Classes -->
+            <TextView
+                android:id="@+id/missedClassesTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Missed: 0"
+                android:textSize="16sp"
+                android:layout_marginStart="16dp" />
+
+            <!-- Total Classes -->
+            <TextView
+                android:id="@+id/totalClassesTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total: 0"
+                android:textSize="16sp"
+                android:layout_marginStart="16dp" />
+
+            <!-- Delete Button -->
+
+        </LinearLayout>
+
+        <!-- Attendance Percentage -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
+
+            <!-- Progress Bar -->
+            <ProgressBar
+                android:id="@+id/attendanceProgressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:progress="50"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp" />
+
+
+            <!-- Attendance Percentage Text -->
+            <TextView
+                android:id="@+id/attendancePercentageTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:text="50%"
+                android:textSize="16sp"
+                android:layout_marginEnd="16dp" />
+
+        </RelativeLayout>
+
+        <!-- Buttons to Increment/Decrement Attended and Missed Classes -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end">
+
+            <!-- Attended and Missed Classes Buttons -->
+            <Button
+                android:id="@+id/addAttendButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+" />
+
+            <Button
+                android:id="@+id/addMissedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:layout_marginStart="8dp" />
+
+            <Button
+                android:id="@+id/deleteButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="🗑️" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
