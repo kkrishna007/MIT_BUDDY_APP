@@ -8,6 +8,15 @@ public class SubjectCard {
     private int requirement;
     private double attendancePercentage;
 
+    // Constructor
+    public SubjectCard(long id, String subjectName, int attended, int missed, int requirement, double attendancePercentage) {
+        this.id = id;
+        this.subjectName = subjectName;
+        this.attended = attended;
+        this.missed = missed;
+        this.requirement = requirement;
+        this.attendancePercentage = attendancePercentage;
+    }
     // Constructors
     public SubjectCard() {
     }

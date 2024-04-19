@@ -9,6 +9,8 @@ import androidx.appcompat.app.AlertDialog;
 import android.widget.LinearLayout;
 import android.widget.EditText;
 import android.widget.TextView;
+import java.util.List;
+
 import android.database.Cursor;
 import android.content.DialogInterface;
 import android.view.ViewGroup;
@@ -41,28 +43,8 @@ public class AttendanceTrackerActivity extends AppCompatActivity {
         loadSubjectCardsFromDatabase();
     }
 
-    public ArrayList<SubjectCard> getAllSubjectCards() {
-        ArrayList<SubjectCard> subjectCards = new ArrayList<>();
-        // Retrieve the subject cards from the database and add them to the ArrayList
-        Cursor cursor = db.query(TABLE_NAME, null, null, null, null, null, null);
-        if (cursor != null && cursor.moveToFirst()) {
-            do {
-                long id = cursor.getLong(cursor.getColumnIndex(COLUMN_ID));
-                String subjectName = cursor.getString(cursor.getColumnIndex(COLUMN_SUBJECT_NAME));
-                int attended = cursor.getInt(cursor.getColumnIndex(COLUMN_ATTENDED));
-                int missed = cursor.getInt(cursor.getColumnIndex(COLUMN_MISSED));
-                int requirement = cursor.getInt(cursor.getColumnIndex(COLUMN_REQUIREMENT));
-                double attendancePercentage = cursor.getDouble(cursor.getColumnIndex(COLUMN_ATTENDANCE_PERCENTAGE));
-                SubjectCard subjectCard = new SubjectCard(id, subjectName, attended, missed, requirement, attendancePercentage);
-                subjectCards.add(subjectCard);
-            } while (cursor.moveToNext());
-            cursor.close();
-        }
-        return subjectCards;
-    }
-
-    private void loadSubjectCardsFromDatabase() {
-        ArrayList<SubjectCard> subjectCards = dbHelper.getAllSubjectCards();
+    public void loadSubjectCardsFromDatabase() {
+        List<SubjectCard> subjectCards = dbHelper.getAllSubjectCards();
         for (SubjectCard card : subjectCards) {
             createSubjectCard(card);
         }
@@ -87,13 +69,10 @@ public class AttendanceTrackerActivity extends AppCompatActivity {
                 int missed = Integer.parseInt(missedEditText.getText().toString());
                 int requirement = Integer.parseInt(requirementEditText.getText().toString());
 
-                // Calculate attendance percentage
                 double attendancePercentage = (double) attended / (attended + missed) * 100;
 
-                // Save subject card to database
                 long id = dbHelper.insertSubjectCard(new SubjectCard(subjectName, attended, missed, requirement, attendancePercentage));
 
-                // Dynamically create subject card
                 createSubjectCard(new SubjectCard(id, subjectName, attended, missed, requirement, attendancePercentage));
             }
         });
@@ -110,10 +89,8 @@ public class AttendanceTrackerActivity extends AppCompatActivity {
     }
 
     private void createSubjectCard(SubjectCard card) {
-        // Inflate subject card layout
         View subjectCardView = getLayoutInflater().inflate(R.layout.subject_card_layout, null);
 
-        // Find views in subject card layout
         TextView subjectNameTextView = subjectCardView.findViewById(R.id.subjectNameTextView);
         TextView attendedClassesTextView = subjectCardView.findViewById(R.id.attendedClassesTextView);
         TextView missedClassesTextView = subjectCardView.findViewById(R.id.missedClassesTextView);
@@ -122,19 +99,16 @@ public class AttendanceTrackerActivity extends AppCompatActivity {
         Button addAttendButton = subjectCardView.findViewById(R.id.addAttendButton);
         Button addMissedButton = subjectCardView.findViewById(R.id.addMissedButton);
         Button deleteButton = subjectCardView.findViewById(R.id.deleteButton);
-        ProgressBar progressBar = subjectCardView.findViewById(R.id.attendanceProgressBar); // Find the progress bar
+        ProgressBar progressBar = subjectCardView.findViewById(R.id.attendanceProgressBar);
 
-        // Set text for subject card views
         subjectNameTextView.setText(card.getSubjectName());
         attendedClassesTextView.setText("Attended: " + card.getAttended());
         missedClassesTextView.setText("Missed: " + card.getMissed());
         totalClassesTextView.setText("Total: " + (card.getAttended() + card.getMissed()));
         attendancePercentageTextView.setText(String.format(Locale.getDefault(), "%.2f%%", card.getAttendancePercentage()));
 
-        // Set progress for the progress bar
         progressBar.setProgress((int) card.getAttendancePercentage());
 
-        // Change progress bar color based on attendance percentage
         if (card.getAttendancePercentage() < 75) {
             progressBar.getProgressDrawable().setColorFilter(
                     ContextCompat.getColor(this, R.color.red),
@@ -147,16 +121,14 @@ public class AttendanceTrackerActivity extends AppCompatActivity {
             );
         }
 
-        // Set onClickListeners for attend and missed buttons
         addAttendButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Increment attended
                 attendedClassesTextView.setText("Attended: " + (card.getAttended() + 1));
                 card.setAttended(card.getAttended() + 1);
                 updateAttendancePercentage(card, attendancePercentageTextView);
                 totalClassesTextView.setText("Total: " + (card.getAttended() + card.getMissed()));
-                progressBar.setProgress((int) ((double) card.getAttended() / (card.getAttended() + card.getMissed()) * 100)); // Update progress bar
+                progressBar.setProgress((int) ((double) card.getAttended() / (card.getAttended() + card.getMissed()) * 100));
                 dbHelper.updateSubjectCard(card);
             }
         });
@@ -164,27 +136,23 @@ public class AttendanceTrackerActivity extends AppCompatActivity {
         addMissedButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Increment missed
                 missedClassesTextView.setText("Missed: " + (card.getMissed() + 1));
                 card.setMissed(card.getMissed() + 1);
                 updateAttendancePercentage(card, attendancePercentageTextView);
                 totalClassesTextView.setText("Total: " + (card.getAttended() + card.getMissed()));
-                progressBar.setProgress((int) ((double) card.getAttended() / (card.getAttended() + card.getMissed()) * 100)); // Update progress bar
+                progressBar.setProgress((int) ((double) card.getAttended() / (card.getAttended() + card.getMissed()) * 100));
                 dbHelper.updateSubjectCard(card);
             }
         });
 
-        // Set onClickListener for delete button
         deleteButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Remove subject card view from its parent
                 ((ViewGroup) subjectCardView.getParent()).removeView(subjectCardView);
                 dbHelper.deleteSubjectCard(card.getId());
             }
         });
 
-        // Add subject card to subjects layout
         LinearLayout subjectsLayout = findViewById(R.id.subjectsLayout);
         subjectsLayout.addView(subjectCardView);
     }

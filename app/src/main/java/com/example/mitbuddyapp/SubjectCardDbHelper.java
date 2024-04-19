@@ -55,6 +55,19 @@ public class SubjectCardDbHelper extends SQLiteOpenHelper {
         db.insert(TABLE_SUBJECT_CARDS, null, values);
         db.close();
     }
+    public long insertSubjectCard(SubjectCard subjectCard) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(KEY_SUBJECT_NAME, subjectCard.getSubjectName());
+        values.put(KEY_ATTENDED, subjectCard.getAttended());
+        values.put(KEY_MISSED, subjectCard.getMissed());
+        values.put(KEY_REQUIREMENT, subjectCard.getRequirement());
+        values.put(KEY_ATTENDANCE_PERCENTAGE, subjectCard.getAttendancePercentage());
+        long id = db.insert(TABLE_SUBJECT_CARDS, null, values);
+        db.close();
+        return id;
+    }
+
 
     public List<SubjectCard> getAllSubjectCards() {
         List<SubjectCard> subjectCards = new ArrayList<>();
@@ -77,6 +90,22 @@ public class SubjectCardDbHelper extends SQLiteOpenHelper {
         db.close();
         return subjectCards;
     }
+
+    public void updateSubjectCard(SubjectCard subjectCard) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(KEY_SUBJECT_NAME, subjectCard.getSubjectName());
+        values.put(KEY_ATTENDED, subjectCard.getAttended());
+        values.put(KEY_MISSED, subjectCard.getMissed());
+        values.put(KEY_REQUIREMENT, subjectCard.getRequirement());
+        values.put(KEY_ATTENDANCE_PERCENTAGE, subjectCard.getAttendancePercentage());
+
+        // Updating row
+        db.update(TABLE_SUBJECT_CARDS, values, KEY_ID + " = ?",
+                new String[] { String.valueOf(subjectCard.getId()) });
+        db.close();
+    }
+
 
     public void deleteSubjectCard(long id) {
         SQLiteDatabase db = this.getWritableDatabase();
